@@ -1,1 +1,19 @@
-<p>list-hellos works!</p>
+<h2>list helos</h2>
+<ul *ngIf="hellos"> 
+  <li *ngFor="let hello of hellos">
+      <p>
+          {{hello.english}}
+      </p>
+      <p>
+        {{hello.hebrew}}
+    </p>
+    <p>
+        {{hello.arabic}}
+    </p>
+    <p>
+        {{hello.french}}
+    </p>
+
+  </li>
+
+</ul>

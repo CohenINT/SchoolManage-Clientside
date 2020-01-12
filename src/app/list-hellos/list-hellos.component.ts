@@ -7,7 +7,8 @@ import {HellosService} from "../hellos.service";
   styleUrls: ['./list-hellos.component.scss']
 })
 export class ListHellosComponent implements OnInit {
-
+ 
+  hellos:Object;
   constructor(private _hellos:HellosService) { }
 
   ngOnInit() {
@@ -15,7 +16,8 @@ export class ListHellosComponent implements OnInit {
    // this._hellos.helloWorld();
 
    this._hellos.fetchHellosCollection().subscribe(data=>{
-    console.log(data);
+     console.log(data[0]); 
+    this.hellos=data;
     //https://youtu.be/_TLhUCjY9iA?t=2483 
     //tutorial where i stopped last time
    });

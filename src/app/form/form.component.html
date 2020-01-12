@@ -1,0 +1,31 @@
+<div class="container">
+<h2>Fill Form</h2>
+<form #helloForm="ngForm" (ngSubmit)="onSubmit()">
+    {{diagnostic}}
+ 
+<div class="form-group">
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" >
+    TODO: remove this: {{model.name}} 
+
+    </div>
+
+    <div class="form-group">
+        <label for="lang">Lang</label>
+        <input type="text" class="form-control" id="lang" required [(ngModel)]="model.lang" name="lang">
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="hello">Hello</label>
+        <input type="text" class="form-control" id="hello" required [(ngModel)]="model.hello" name="hello">
+        
+    </div>
+
+
+     <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+</div>
